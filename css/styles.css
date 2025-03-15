@@ -6,23 +6,31 @@ body {
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
+    background: url('../images/updated-split-background.png') center/cover no-repeat;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Header Styling */
 .header {
     text-align: center;
     padding: 20px;
-    background: #333;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
-/* Container for the sections */
+/* Container */
 .container {
     display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Section Styling */
@@ -38,64 +46,20 @@ body {
     transition: 0.3s;
     padding: 20px;
     position: relative;
+    height: 100vh;
 }
 
-/* LGBTQ Section - background image */
+/* Split Background Handling */
 .lgbtq {
-    background: url('images/lgbtq-support.jpg') center/cover no-repeat;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
 }
 
-/* International Section - background image */
 .international {
-    background: url('images/space-background.png') center/cover no-repeat;
-    position: relative;
-    text-align: center;
-    height: 100%; /* Ensure it takes up full height */
-}
-
-/* Overlay for text visibility */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/* Center the globe image in the middle of the International Section */
-.globe-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 50%; /* Adjust the size of the globe */
-    max-height: 50%;
-}
-
-/* Heading Styling */
-.section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Button Styling */
-.btn {
-    padding: 12px 24px;
-    background: white;
-    color: black;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: 0.3s;
-    border-radius: 5px;
-    font-weight: 700;
-}
-
-.btn:hover {
-    background: lightgray;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
 }
 
 /* Responsive Design */
@@ -107,3 +71,4 @@ body {
         width: 100%;
     }
 }
+
