@@ -3,24 +3,29 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
-    background-color: #f0f0f0;
-}
-
-/* Container */
-.container {
-    display: flex;
-    width: 90%;
-    max-width: 1200px;
-    height: 90vh;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
     overflow: hidden;
 }
 
-/* Sections */
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Container for the sections */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Section Styling */
 .section {
     flex: 1;
     display: flex;
@@ -32,41 +37,61 @@ body {
     cursor: pointer;
     transition: 0.3s;
     padding: 20px;
+    position: relative;
 }
 
-/* Left Section - LGBTQ */
+/* LGBTQ Section - background image */
 .lgbtq {
-    background: linear-gradient(to right, #ff0000, #ff7300, #ffeb00, #00ff00, #0099ff, #9400d3);
+    background: url('images/lgbtq-support.jpg') center/cover no-repeat;
 }
 
-/* Right Section - International */
+/* International Section - background image */
 .international {
-    background: url('images/globe-with-flags.jpg') center/cover;
+    background: url('images/space-background.png') center/cover no-repeat;
+    position: relative;
+    text-align: center;
+    height: 100%; /* Ensure it takes up full height */
 }
 
-/* Hover Effect */
-.section:hover {
-    filter: brightness(1.2);
+/* Overlay for text visibility */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* Headings */
-h1 {
+/* Center the globe image in the middle of the International Section */
+.globe-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50%; /* Adjust the size of the globe */
+    max-height: 50%;
+}
+
+/* Heading Styling */
+.section h2 {
     font-size: 2.5rem;
+    font-weight: 700;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Buttons */
+/* Button Styling */
 .btn {
-    padding: 12px 25px;
+    padding: 12px 24px;
     background: white;
     color: black;
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
     margin-top: 15px;
-    border-radius: 30px;
     transition: 0.3s;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    font-weight: 700;
 }
 
 .btn:hover {
@@ -77,10 +102,8 @@ h1 {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        height: auto;
     }
     .section {
         width: 100%;
-        padding: 50px;
     }
 }
