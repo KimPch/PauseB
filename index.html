@@ -6,37 +6,103 @@
     <title>Pause and Breathe Healing</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            padding: 20px;
+            position: relative;
+        }
+        .lgbtq {
+            background: url('pages/lgbtq-support.jpg') center/cover no-repeat;
+        }
+        .international {
+            background: url('images/space-background.png') center/cover no-repeat;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+        .btn {
+            padding: 12px 24px;
+            background: white;
+            color: black;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+        .btn:hover {
+            background: lightgray;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .section {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <h1 class="logo">Pause and Breathe Healing</h1>
     </header>
-
-    <!-- Main Container: Using Flexbox to center the content -->
     <div class="container">
-        <!-- LGBTQ Support Section -->
         <div class="section lgbtq" onclick="window.location.href='lgbtq.html'">
             <div class="overlay"></div>
-            <!-- Optional LGBTQ Image -->
-            <img src="images/lgbtq-background.png" alt="LGBTQ Support Image" class="lgbtq-image">
             <h2>LGBTQ Support</h2>
             <p>Healing, Growth, and Empowerment for Every Identity</p>
             <button class="btn">Learn More</button>
         </div>
-
-        <!-- International & Minority Support Section -->
         <div class="section international" onclick="window.location.href='international.html'">
             <div class="overlay"></div>
-            <!-- Center the globe-with-flags image in the middle of the International Section -->
-            <img src="images/globe-with-flags.jpg" alt="Globe with Flags" class="globe-image">
             <h2>International & Minority Support</h2>
             <p>Understanding and Mental Wellness Across Cultures</p>
             <button class="btn">Learn More</button>
         </div>
     </div>
-
-    <!-- Globe Image Centered in the Middle of the Page -->
-    <img src="images/globe.png" alt="Globe Image" class="globe-center">
 </body>
 </html>
 
