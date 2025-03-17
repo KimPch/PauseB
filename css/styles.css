@@ -23,7 +23,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 66vh; /* Resize header to 2/3 */
 }
 
 /* Logo Styling */
