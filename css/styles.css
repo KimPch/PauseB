@@ -1,104 +1,118 @@
-/* General styling for the header */
-.header {
-    height: 66.67%;  /* 2/3 of original height */
-    background: url('images/texture.jpg') no-repeat center center; /* Add your texture image here */
-    background-size: cover;
-    color: white;
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background: url('../images/updated-split-background.png') center/cover no-repeat;
     align-items: center;
-    padding: 0 20px;
+    justify-content: center;
 }
 
-/* Logo container styling */
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo Styling */
 .logo-container {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
 .logo-img {
-    height: 50px;  /* Adjust the size as needed */
-    margin-right: 10px;
+    height: 60px;
+    width: auto;
 }
 
 .logo-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-/* Navigation links to the right */
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-
-.navbar a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-/* Styling for the buttons */
-.small-btn {
-    padding: 15px 30px;
-    font-size: 16px;
+    font-size: 1.8rem;
     font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.lgbtq-btn {
-    background-color: orange;
+/* Navigation */
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
-.lgbtq-btn:hover {
-    background-color: darkorange;
-}
-
-.international-btn {
-    background-color: blue;
-    color: white;
-}
-
-.international-btn:hover {
-    background-color: darkblue;
-}
-
-/* Layout for the content */
+/* Main Content Layout */
 .container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-.half {
-    width: 45%;
-    text-align: center;
-}
-
-.left {
-    /* Styling specific to the left side (LGBTQ button) */
-}
-
-.right {
-    /* Styling specific to the right side (International button) */
-}
-
-/* Footer styling */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
+/* Section Styling */
+.section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    height: 100vh;
 }
+
+/* Split Background */
+.lgbtq {
+    width: 50%;
+}
+
+.international {
+    width: 50%;
+}
+
+/* Smaller Clickable Sections */
+.box {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .section {
+        width: 100%;
+    }
+    .box {
+        width: 80%;
+    }
+}
+
 
