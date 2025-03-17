@@ -88,7 +88,7 @@ body {
     width: 50%;
 }
 
-/* Smaller Clickable Sections */
+/* Box Styling */
 .box {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -102,6 +102,35 @@ body {
     transform: scale(1.05);
 }
 
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Specific Button Colors */
+.lgbtq-btn {
+    background-color: #FF7F50; /* Orange color */
+}
+
+.lgbtq-btn:hover {
+    background-color: #FF4500; /* Darker orange on hover */
+}
+
+.international-btn {
+    background-color: #1E90FF; /* Blue color */
+}
+
+.international-btn:hover {
+    background-color: #4682B4; /* Darker blue on hover */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -109,9 +138,6 @@ body {
     }
     .section {
         width: 100%;
-    }
-    .box {
-        width: 80%;
     }
 }
 
