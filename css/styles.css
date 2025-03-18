@@ -140,5 +140,32 @@ body {
         width: 100%;
     }
 }
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    background-color: #ffdde1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.community textarea {
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
 
 
