@@ -1,47 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LGBTQ+ Support | Pause and Breathe Healing</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LGBTQ+ Support | Pause and Breathe Healing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: url('https://images.unsplash.com/photo-1530026186672-2443125b3bf9?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+
+    .services {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      text-align: center;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin: 15px 0;
+      font-size: 1.1em;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .grid-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+      backdrop-filter: blur(6px);
+    }
+
+    .grid-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .grid-item h3 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>🌈 LGBTQ+ Mental Health Support</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="support.html">Support</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <h1>🌈 LGBTQ+ Mental Health Support</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Support</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="intro">
-            <h2>You're Not Alone 💜</h2>
-            <p>At Pause and Breathe Healing, we understand the unique challenges faced by the LGBTQ+ community when seeking mental health support. Our team consists of therapists and coaches who are also part of the community, ensuring that your voice is heard and your experience is validated.</p>
-        </section>
+  <main>
+    <section class="intro">
+      <h2>You're Not Alone 💜</h2>
+      <p>At Pause and Breathe Healing, we understand the unique challenges faced by the LGBTQ+ community when seeking mental health support. Our team consists of therapists and coaches who are also part of the community, ensuring that your voice is heard and your experience is validated.</p>
+    </section>
 
-        <section class="services">
-            <h2>Our Support Services</h2>
-            <ul>
-                <li>🏳️‍🌈 LGBTQ+ Affirmative Therapy</li>
-                <li>🧠 Mental Health Resources</li>
-                <li>💬 Safe Space for Discussions</li>
-                <li>📞 24/7 Helplines & Crisis Support</li>
-            </ul>
-        </section>
+    <section class="services">
+      <h2>Our Core Support Services</h2>
+      <ul>
+        <li>🏳️‍🌈 LGBTQ+ Affirmative Therapy</li>
+        <li>🧠 Mental Health Resources</li>
+        <li>💬 Safe Space for Discussions</li>
+        <li>📞 24/7 Helplines & Crisis Support</li>
+      </ul>
+    </section>
 
-        <section class="community">
-            <h2>Join the Conversation</h2>
-            <p>Have a question or want to connect? Leave a comment below:</p>
-            <textarea placeholder="Share your thoughts..."></textarea>
-            <button>Submit</button>
-        </section>
-    </main>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h3>🧑‍⚕️ Therapists</h3>
+        <p>Meet our LGBTQ+ affirming, community-based mental health professionals.</p>
+      </div>
+      <div class="grid-item">
+        <h3>📚 Info & Articles</h3>
+        <p>Explore resources on anxiety, trauma, gender identity, and more.</p>
+      </div>
+      <div class="grid-item">
+        <h3>💬 Peer Stories</h3>
+        <p>Read personal experiences of healing, growth, and identity journeys.</p>
+      </div>
+      <div class="grid-item">
+        <h3>🤝 Group Counseling</h3>
+        <p>Join a safe space to connect with others in guided support groups.</p>
+      </div>
+      <div class="grid-item">
+        <h3>🎓 Workshops</h3>
+        <p>Participate in community-led learning sessions and healing activities.</p>
+      </div>
+      <div class="grid-item">
+        <h3>🌍 Outreach Resources</h3>
+        <p>Access directories, hotlines, and tools for navigating your healing journey.</p>
+      </div>
+    </div>
+  </main>
 
-    <footer>
-        <p>© 2025 Pause and Breathe Healing | LGBTQ+ Support</p>
-    </footer>
+  <footer>
+    <p>© 2025 Pause and Breathe Healing | LGBTQ+ Support</p>
+  </footer>
 </body>
 </html>
+
