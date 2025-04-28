@@ -33,7 +33,7 @@
     }
 
     header {
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 20px;
       text-align: center;
     }
@@ -63,7 +63,7 @@
     }
 
     .services {
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.6);
       padding: 20px;
       border-radius: 12px;
       max-width: 700px;
@@ -90,35 +90,42 @@
     }
 
     .grid-item {
-      background: rgba(255, 255, 255, 0.7); /* Fallback color */
+      position: relative;
       background-size: cover;
       background-position: center;
+      height: 300px;
       border-radius: 15px;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       padding: 20px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      color: white; /* Text color */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .grid-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .grid-item h3, .grid-item p {
+      position: relative;
+      z-index: 1;
     }
 
     .grid-item:hover {
-      background: rgba(255, 255, 255, 0.8);
       transform: translateY(-5px);
-    }
-
-    .grid-item h3 {
-      margin-bottom: 10px;
-      font-size: 1.3em;
-      color: #222;
-    }
-
-    .grid-item p {
-      color: #333;
     }
 
     footer {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 20px;
       margin-top: 40px;
       color: #444;
@@ -127,6 +134,9 @@
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.5em;
+      }
+      .grid-item {
+        height: 250px;
       }
     }
   </style>
@@ -159,30 +169,37 @@
     </section>
 
     <div class="grid-container">
-      <div class="grid-item" style="background-image: url('images/therapists.jpg');">
+
+      <div class="grid-item" style="background-image: url('images/photo-3.jpg');">
         <h3>🧑‍⚕️ Therapists</h3>
         <p>Meet our LGBTQ+ affirming, community-based mental health professionals.</p>
       </div>
-      <div class="grid-item" style="background-image: url('images/info-articles.jpg');">
-        <h3>📚 Info & Articles</h3>
-        <p>Explore resources on anxiety, trauma, gender identity, and more.</p>
+
+      <div class="grid-item" style="background-image: url('images/photo-6.png');">
+        <h3>📚 Information</h3>
+        <p>Articles, research, and educational materials on LGBTQ+ mental health and wellbeing.</p>
       </div>
-      <div class="grid-item" style="background-image: url('images/peer-stories.jpg');">
+
+      <div class="grid-item" style="background-image: url('images/photo-2.jpg');">
         <h3>💬 Peer Stories</h3>
-        <p>Read personal experiences of healing, growth, and identity journeys.</p>
+        <p>Read real stories from LGBTQ+ individuals sharing their experiences and journeys.</p>
       </div>
-      <div class="grid-item" style="background-image: url('images/group-counseling.jpg');">
+
+      <div class="grid-item" style="background-image: url('images/photo-1.jpg');">
         <h3>🤝 Group Counseling</h3>
-        <p>Join a safe space to connect with others in guided support groups.</p>
+        <p>Join supportive group counseling sessions led by experienced LGBTQ+ affirming therapists.</p>
       </div>
-      <div class="grid-item" style="background-image: url('images/workshops.jpg');">
-        <h3>🎓 Workshops</h3>
-        <p>Participate in community-led learning sessions and healing activities.</p>
+
+      <div class="grid-item" style="background-image: url('images/photo-5.jpeg');">
+        <h3>🎓 Workshops and Activities</h3>
+        <p>Participate in workshops and activities promoting mental health, resilience, and community connection.</p>
       </div>
-      <div class="grid-item" style="background-image: url('images/outreach-resources.jpg');">
+
+      <div class="grid-item" style="background-image: url('images/photo-4.jpeg');">
         <h3>🌍 Outreach Resources</h3>
-        <p>Access directories, hotlines, and tools for navigating your healing journey.</p>
+        <p>Access hotlines, emergency resources, and community-based support organizations.</p>
       </div>
+
     </div>
   </main>
 
