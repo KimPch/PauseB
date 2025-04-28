@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Services</title>
+  <title>LGBTQ+ Mental Health and My Service</title>
   <style>
     body {
       margin: 0;
@@ -10,6 +10,26 @@
       background: url('your-background-image.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 4rem 2rem 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      border-bottom: 2px solid #fff;
+      animation: fadeIn 2s ease forwards, bounce 1s infinite;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 800;
+      letter-spacing: 2px;
     }
 
     .grid-container {
@@ -59,6 +79,11 @@
       font-size: 1.1rem;
     }
 
+    /* Hover effect on buttons/cards */
+    .grid-item:active {
+      transform: scale(0.98);
+    }
+
     @keyframes rainbow {
       0% { background-color: #ff9a9e; }
       20% { background-color: #fad0c4; }
@@ -79,6 +104,47 @@
       }
     }
 
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* Back to Home Button */
+    .back-to-home {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #fbc2eb;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      animation: bounce 1.5s infinite;
+      z-index: 999;
+    }
+
+    .back-to-home:hover {
+      background-color: #ff9a9e;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+
     a {
       text-decoration: none;
       color: inherit;
@@ -87,6 +153,10 @@
 </head>
 
 <body>
+
+<header>
+  <h1>LGBTQ+ MENTAL HEALTH AND MY SERVICE</h1>
+</header>
 
 <section id="categories" class="grid-container">
   
@@ -127,6 +197,11 @@
   </a>
 
 </section>
+
+<!-- Floating Back to Home Button -->
+<div class="back-to-home" onclick="window.location.href = 'index.html'">
+  🏠
+</div>
 
 </body>
 </html>
