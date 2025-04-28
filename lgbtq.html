@@ -13,72 +13,45 @@
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background: url('images/profile-photo.png') no-repeat center center fixed;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #000;
-      position: relative;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(255,0,150,0.15), rgba(0,229,255,0.15));
-      z-index: -1;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5em;
       color: #222;
     }
 
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
-      color: #444;
+      color: #555;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e91e63;
     }
 
     main {
+      flex: 1;
       padding: 40px 20px;
-      background-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .intro {
-      max-width: 800px;
-      margin: 0 auto 40px auto;
-      text-align: center;
-    }
-
-    .services {
-      background-color: rgba(255, 255, 255, 0.4);
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 700px;
-      margin: 0 auto 50px auto;
-      text-align: center;
-    }
-
-    .services ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .services li {
-      margin: 15px 0;
-      font-size: 1.1em;
     }
 
     .grid-container {
@@ -90,40 +63,43 @@
     }
 
     .grid-item {
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 15px;
-      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px 20px;
       text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: white;
       transition: 0.3s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-decoration: none;
     }
 
     .grid-item:hover {
-      background: rgba(255, 255, 255, 0.8);
-      transform: translateY(-5px);
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
-    .grid-item h3 {
-      margin-bottom: 10px;
-      font-size: 1.3em;
-      color: #222;
-    }
-
-    .grid-item p {
-      color: #333;
-    }
+    .grid-item:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+    .grid-item:nth-child(2) { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+    .grid-item:nth-child(3) { background: linear-gradient(135deg, #84fab0, #8fd3f4); }
+    .grid-item:nth-child(4) { background: linear-gradient(135deg, #fccb90, #d57eeb); }
+    .grid-item:nth-child(5) { background: linear-gradient(135deg, #fddb92, #d1fdff); }
+    .grid-item:nth-child(6) { background: linear-gradient(135deg, #cfd9df, #e2ebf0); }
 
     footer {
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
-      margin-top: 40px;
-      color: #444;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
     }
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 1.5em;
+        font-size: 2em;
       }
     }
   </style>
@@ -133,53 +109,20 @@
   <header>
     <h1>🌈 LGBTQ+ Mental Health Support</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Support</a>
-      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="intro">
-      <h2>You're Not Alone 💜</h2>
-      <p>At Pause and Breathe Healing, we understand the unique challenges faced by the LGBTQ+ community when seeking mental health support. Our team consists of therapists and coaches who are also part of the community, ensuring that your voice is heard and your experience is validated.</p>
-    </section>
-
-    <section class="services">
-      <h2>Our Core Support Services</h2>
-      <ul>
-        <li>🏳️‍🌈 LGBTQ+ Affirmative Therapy</li>
-        <li>🧠 Mental Health Resources</li>
-        <li>💬 Safe Space for Discussions</li>
-        <li>📞 24/7 Helplines & Crisis Support</li>
-      </ul>
-    </section>
-
     <div class="grid-container">
-      <div class="grid-item">
-        <h3>🧑‍⚕️ Therapists</h3>
-        <p>Meet our LGBTQ+ affirming, community-based mental health professionals.</p>
-      </div>
-      <div class="grid-item">
-        <h3>📚 Info & Articles</h3>
-        <p>Explore resources on anxiety, trauma, gender identity, and more.</p>
-      </div>
-      <div class="grid-item">
-        <h3>💬 Peer Stories</h3>
-        <p>Read personal experiences of healing, growth, and identity journeys.</p>
-      </div>
-      <div class="grid-item">
-        <h3>🤝 Group Counseling</h3>
-        <p>Join a safe space to connect with others in guided support groups.</p>
-      </div>
-      <div class="grid-item">
-        <h3>🎓 Workshops</h3>
-        <p>Participate in community-led learning sessions and healing activities.</p>
-      </div>
-      <div class="grid-item">
-        <h3>🌍 Outreach Resources</h3>
-        <p>Access directories, hotlines, and tools for navigating your healing journey.</p>
-      </div>
+      <a class="grid-item" href="therapists.html">🧑‍⚕️ Therapists</a>
+      <a class="grid-item" href="info.html">📚 Info & Articles</a>
+      <a class="grid-item" href="peer-stories.html">💬 Peer Stories</a>
+      <a class="grid-item" href="group-counseling.html">🤝 Group Counseling</a>
+      <a class="grid-item" href="workshops.html">🎓 Workshops</a>
+      <a class="grid-item" href="outreach.html">🌍 Outreach Resources</a>
     </div>
   </main>
 
