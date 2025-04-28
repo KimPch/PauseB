@@ -90,12 +90,15 @@
     }
 
     .grid-item {
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.7); /* Fallback color */
+      background-size: cover;
+      background-position: center;
       border-radius: 15px;
       padding: 20px;
       text-align: center;
       transition: 0.3s;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      color: white; /* Text color */
     }
 
     .grid-item:hover {
@@ -156,27 +159,27 @@
     </section>
 
     <div class="grid-container">
-      <div class="grid-item">
+      <div class="grid-item" style="background-image: url('images/therapists.jpg');">
         <h3>🧑‍⚕️ Therapists</h3>
         <p>Meet our LGBTQ+ affirming, community-based mental health professionals.</p>
       </div>
-      <div class="grid-item">
+      <div class="grid-item" style="background-image: url('images/info-articles.jpg');">
         <h3>📚 Info & Articles</h3>
         <p>Explore resources on anxiety, trauma, gender identity, and more.</p>
       </div>
-      <div class="grid-item">
+      <div class="grid-item" style="background-image: url('images/peer-stories.jpg');">
         <h3>💬 Peer Stories</h3>
         <p>Read personal experiences of healing, growth, and identity journeys.</p>
       </div>
-      <div class="grid-item">
+      <div class="grid-item" style="background-image: url('images/group-counseling.jpg');">
         <h3>🤝 Group Counseling</h3>
         <p>Join a safe space to connect with others in guided support groups.</p>
       </div>
-      <div class="grid-item">
+      <div class="grid-item" style="background-image: url('images/workshops.jpg');">
         <h3>🎓 Workshops</h3>
         <p>Participate in community-led learning sessions and healing activities.</p>
       </div>
-      <div class="grid-item">
+      <div class="grid-item" style="background-image: url('images/outreach-resources.jpg');">
         <h3>🌍 Outreach Resources</h3>
         <p>Access directories, hotlines, and tools for navigating your healing journey.</p>
       </div>
