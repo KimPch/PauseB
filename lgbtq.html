@@ -1,251 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>LGBTQ+ Mental Health and My Service</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LGBTQ+ Support | Pause and Breathe Healing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Nunito', sans-serif;
       background: url('images/profile-photo.png') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
-      text-align: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #000;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(255,0,150,0.15), rgba(0,229,255,0.15));
+      z-index: -1;
     }
 
     header {
-      padding: 4rem 2rem 2rem;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(5px);
-      border-bottom: 2px solid #fff;
-      animation: fadeIn 2s ease forwards, bounce 1s infinite;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      text-align: center;
     }
 
-    /* Stylish Title */
     header h1 {
-      font-size: 4rem;
       margin: 0;
-      background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      font-size: 2em;
+      color: #222;
     }
 
-    /* My Service Section */
-    .service-section {
-      padding: 4rem 2rem;
-      background: rgba(0, 0, 0, 0.6);
-      margin: 4rem 0;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .service-section h2 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #fff;
+    nav a {
+      color: #444;
+      margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
-    .service-section p {
-      font-size: 1.4rem;
-      color: #ddd;
-      line-height: 1.6;
+    main {
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.5);
     }
 
-    /* Grid Layout for Cards */
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+
+    .services {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      text-align: center;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin: 15px 0;
+      font-size: 1.1em;
+    }
+
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 5rem;
-      justify-items: center;
-      animation: rainbow 10s infinite linear alternate;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .grid-item {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      overflow: hidden;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 15px;
+      padding: 20px;
       text-align: center;
-      padding: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeInUp 1s forwards;
-      animation-delay: var(--delay);
-      cursor: pointer;
-      width: 100%;
-      max-width: 400px;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .grid-item:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .grid-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.8);
+      transform: translateY(-5px);
     }
 
     .grid-item h3 {
-      margin: 0.5rem 0;
-      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      color: #222;
     }
 
     .grid-item p {
-      font-size: 1.1rem;
+      color: #333;
     }
 
-    /* Hover effect on buttons/cards */
-    .grid-item:active {
-      transform: scale(0.98);
-    }
-
-    @keyframes rainbow {
-      0% { background-color: #ff9a9e; }
-      20% { background-color: #fad0c4; }
-      40% { background-color: #fbc2eb; }
-      60% { background-color: #a18cd1; }
-      80% { background-color: #84fab0; }
-      100% { background-color: #8fd3f4; }
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-50px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-
-    /* Back to Home Button */
-    .back-to-home {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #fbc2eb;
-      color: #fff;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      animation: bounce 1.5s infinite;
-      z-index: 999;
-    }
-
-    .back-to-home:hover {
-      background-color: #ff9a9e;
-      transform: scale(1.1);
+    footer {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      margin-top: 40px;
+      color: #444;
     }
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 1.5em;
       }
-
-      .service-section h2 {
-        font-size: 2rem;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <h1>🌈 LGBTQ+ Mental Health Support</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Support</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>LGBTQ+ Mental Health & Services</h1>
-</header>
+  <main>
+    <section class="intro">
+      <h2>You're Not Alone 💜</h2>
+      <p>At Pause and Breathe Healing, we understand the unique challenges faced by the LGBTQ+ community when seeking mental health support. Our team consists of therapists and coaches who are also part of the community, ensuring that your voice is heard and your experience is validated.</p>
+    </section>
 
-<section class="service-section">
-  <h2>Our Services</h2>
-  <p>We offer inclusive and supportive mental health services tailored for the LGBTQ+ community, including:</p>
-  <p>- Gender-Affirming Therapy</p>
-  <p>- Peer Support Groups</p>
-  <p>- Workshops & Educational Resources</p>
-  <p>- Community Outreach and more</p>
-</section>
+    <section class="services">
+      <h2>Our Core Support Services</h2>
+      <ul>
+        <li>🏳️‍🌈 LGBTQ+ Affirmative Therapy</li>
+        <li>🧠 Mental Health Resources</li>
+        <li>💬 Safe Space for Discussions</li>
+        <li>📞 24/7 Helplines & Crisis Support</li>
+      </ul>
+    </section>
 
-<section id="categories" class="grid-container">
-  
-  <a href="therapists.html" style="--delay: 0s" class="grid-item">
-    <img src="https://images.unsplash.com/photo-1623776053495-812ed53edb22?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Therapists">
-    <h3>🧑‍⚕️ Therapists</h3>
-    <p>Meet our affirming, experienced mental health providers.</p>
-  </a>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h3>🧑‍⚕️ Therapists</h3>
+        <p>Meet our LGBTQ+ affirming, community-based mental health professionals.</p>
+      </div>
+      <div class="grid-item">
+        <h3>📚 Info & Articles</h3>
+        <p>Explore resources on anxiety, trauma, gender identity, and more.</p>
+      </div>
+      <div class="grid-item">
+        <h3>💬 Peer Stories</h3>
+        <p>Read personal experiences of healing, growth, and identity journeys.</p>
+      </div>
+      <div class="grid-item">
+        <h3>🤝 Group Counseling</h3>
+        <p>Join a safe space to connect with others in guided support groups.</p>
+      </div>
+      <div class="grid-item">
+        <h3>🎓 Workshops</h3>
+        <p>Participate in community-led learning sessions and healing activities.</p>
+      </div>
+      <div class="grid-item">
+        <h3>🌍 Outreach Resources</h3>
+        <p>Access directories, hotlines, and tools for navigating your healing journey.</p>
+      </div>
+    </div>
+  </main>
 
-  <a href="articles.html" style="--delay: 0.1s" class="grid-item">
-    <img src="https://images.unsplash.com/photo-1612831662128-0998c11e7970?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Articles">
-    <h3>📚 Info & Articles</h3>
-    <p>Learn more about identity, resilience, and mental wellness.</p>
-  </a>
-
-  <a href="peer-stories.html" style="--delay: 0.2s" class="grid-item">
-    <img src="https://images.unsplash.com/photo-1615397681462-38c574c5f7a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Peer Stories">
-    <h3>💬 Peer Stories</h3>
-    <p>Discover real journeys of hope, growth, and healing.</p>
-  </a>
-
-  <a href="group-counseling.html" style="--delay: 0.3s" class="grid-item">
-    <img src="https://images.unsplash.com/photo-1579208575657-c595a05383a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Group Counseling">
-    <h3>🤝 Group Counseling</h3>
-    <p>Join our support groups to share and heal together.</p>
-  </a>
-
-  <a href="workshops.html" style="--delay: 0.4s" class="grid-item">
-    <img src="https://images.unsplash.com/photo-1622911031910-6f1fc92b89e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Workshops">
-    <h3>🎓 Workshops</h3>
-    <p>Attend community workshops on wellness and empowerment.</p>
-  </a>
-
-  <a href="outreach.html" style="--delay: 0.5s" class="grid-item">
-    <img src="https://images.unsplash.com/photo-1605460375648-278bcbd579a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Outreach Resources">
-    <h3>🌍 Outreach Resources</h3>
-    <p>Access directories, helplines, and emergency contacts.</p>
-  </a>
-
-</section>
-
-<!-- Floating Back to Home Button -->
-<div class="back-to-home" onclick="window.location.href = 'index.html'">
-  🏠
-</div>
-
+  <footer>
+    <p>© 2025 Pause and Breathe Healing | LGBTQ+ Support</p>
+  </footer>
 </body>
 </html>
