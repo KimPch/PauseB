@@ -13,14 +13,14 @@
     }
 
     header {
-      background-color: #6a1b9a;
+      background-color: #9c4dcc;
       color: white;
       padding: 20px;
       text-align: center;
     }
 
     nav a {
-      color: #ffd6ff;
+      color: #fbefff;
       text-decoration: none;
       font-weight: bold;
     }
@@ -35,6 +35,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
+      margin-top: 20px;
     }
 
     .story-card {
@@ -42,9 +43,6 @@
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
     .story-card img {
@@ -66,6 +64,38 @@
       line-height: 1.4;
       color: #333;
     }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #9c4dcc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background-color: #872ebf;
+    }
   </style>
 </head>
 <body>
@@ -79,31 +109,51 @@
   <main>
     <p>Hear directly from LGBTQ+ individuals sharing their lived experiences, challenges, healing journeys, and growth.</p>
 
-    <div class="story-grid">
+    <!-- Story Submission Form -->
+    <form id="storyForm">
+      <h2>Share Your Story</h2>
+      <input type="text" id="name" placeholder="Your Name (optional)" />
+      <input type="text" id="pronouns" placeholder="Your Pronouns (e.g., they/them)" />
+      <textarea id="story" rows="5" placeholder="Write your story here..." required></textarea>
+      <button type="submit">Submit Story</button>
+    </form>
+
+    <!-- Stories Display -->
+    <div class="story-grid" id="storyGrid">
       <div class="story-card">
-        <img src="https://via.placeholder.com/80" alt="Portrait of Alex (they/them)">
+        <img src="https://via.placeholder.com/80" alt="Portrait of Alex">
         <div class="story-meta"><strong>Alex (they/them)</strong></div>
         <div class="story-text">
           “For the first time, I found a therapist who understood my journey without me needing to explain every detail. That changed everything.”
         </div>
       </div>
-
-      <div class="story-card">
-        <img src="https://via.placeholder.com/80" alt="Portrait of Maya (she/her)">
-        <div class="story-meta"><strong>Maya (she/her)</strong></div>
-        <div class="story-text">
-          “Joining a group session made me realize I wasn’t alone. It gave me the courage to come out to my family.”
-        </div>
-      </div>
-
-      <div class="story-card">
-        <img src="https://via.placeholder.com/80" alt="Portrait of Jordan (he/him)">
-        <div class="story-meta"><strong>Jordan (he/him)</strong></div>
-        <div class="story-text">
-          “Healing isn't linear, but being in community helps me see progress when I can't see it myself.”
-        </div>
-      </div>
     </div>
   </main>
+
+  <script>
+    const form = document.getElementById('storyForm');
+    const grid = document.getElementById('storyGrid');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim() || 'Anonymous';
+      const pronouns = document.getElementById('pronouns').value.trim();
+      const story = document.getElementById('story').value.trim();
+
+      if (story.length === 0) return;
+
+      const card = document.createElement('div');
+      card.className = 'story-card';
+      card.innerHTML = `
+        <img src="https://via.placeholder.com/80" alt="Portrait">
+        <div class="story-meta"><strong>${name}${pronouns ? ` (${pronouns})` : ''}</strong></div>
+        <div class="story-text">“${story}”</div>
+      `;
+      grid.prepend(card);
+
+      form.reset();
+    });
+  </script>
 </body>
 </html>
