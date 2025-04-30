@@ -4,6 +4,69 @@
   <meta charset="UTF-8" />
   <title>Peer Stories | Pause and Breathe Healing</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffd6ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .story-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .story-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .story-meta {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .story-text {
+      margin-top: 10px;
+      font-size: 1em;
+      line-height: 1.4;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,11 +75,35 @@
       <a href="lgbtq.html">Home</a>
     </nav>
   </header>
+
   <main>
-    <section>
-      <p>Hear directly from LGBTQ+ individuals sharing their lived experiences, challenges, healing journeys, and growth.</p>
-      <!-- Embed testimonials or story cards here, Rednote-style -->
-    </section>
+    <p>Hear directly from LGBTQ+ individuals sharing their lived experiences, challenges, healing journeys, and growth.</p>
+
+    <div class="story-grid">
+      <div class="story-card">
+        <img src="https://via.placeholder.com/80" alt="Portrait of Alex (they/them)">
+        <div class="story-meta"><strong>Alex (they/them)</strong></div>
+        <div class="story-text">
+          “For the first time, I found a therapist who understood my journey without me needing to explain every detail. That changed everything.”
+        </div>
+      </div>
+
+      <div class="story-card">
+        <img src="https://via.placeholder.com/80" alt="Portrait of Maya (she/her)">
+        <div class="story-meta"><strong>Maya (she/her)</strong></div>
+        <div class="story-text">
+          “Joining a group session made me realize I wasn’t alone. It gave me the courage to come out to my family.”
+        </div>
+      </div>
+
+      <div class="story-card">
+        <img src="https://via.placeholder.com/80" alt="Portrait of Jordan (he/him)">
+        <div class="story-meta"><strong>Jordan (he/him)</strong></div>
+        <div class="story-text">
+          “Healing isn't linear, but being in community helps me see progress when I can't see it myself.”
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 </html>
